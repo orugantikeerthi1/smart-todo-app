@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neo Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="top">
+    <h1>🚀 Neo Task Manager</h1>
+
+    <div class="progress-box">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <p id="taskStatus">0 Tasks Completed</p>
+  </div>
+
+  <div class="task-input">
+
+    <input type="text" id="taskInput" placeholder="Enter task..." />
+
+    <select id="category">
+      <option value="Work">Work</option>
+      <option value="Study">Study</option>
+      <option value="Personal">Personal</option>
+      <option value="Fitness">Fitness</option>
+    </select>
+
+    <input type="datetime-local" id="taskDate" />
+
+    <button onclick="addTask()">Add Task</button>
+  </div>
+
+  <div class="search-box">
+    <input type="text" id="searchTask" placeholder="Search task..." onkeyup="searchTasks()">
+  </div>
+
+  <div class="task-list" id="taskList"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
